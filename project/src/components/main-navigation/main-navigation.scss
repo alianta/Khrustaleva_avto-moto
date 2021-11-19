@@ -1,0 +1,22 @@
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
+  max-width: 80%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  list-style: none;
+}
+
+.main-nav__item {
+  margin: 15px 0 15px 68px;
+}
+
+.main-nav__link {
+  color: $color-gray-2;
+  text-decoration: none;
+}

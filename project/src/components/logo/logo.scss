@@ -6,15 +6,16 @@
 }
 
 .logo__link {
+  display: inline-block;
+  margin-left: 19px;
+  max-width: 60px;
   color: $color-gray-2;
   text-decoration: none;
-  max-width: 60px;
-  display: inline-block;
 }
 
 .logo__name {
   display: inline-block;
-  letter-spacing: 0.13em;
+  letter-spacing: 3px;
 
   &--first {
     font-weight: bold;

@@ -1,6 +1,7 @@
 @import '../../assets/scss/global.scss';
 @import '../site-page/site-page.scss';
 @import '../logo/logo.scss';
+@import '../main-navigation/main-navigation.scss';
 
 .page, .page__body {
   height: 100%;
@@ -14,9 +15,6 @@
 .root{
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  min-height: 100%;
-  max-width: $desktop-width;
-  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -30,4 +28,8 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.wrapper {
+  background-color: $color-gray-1;
 }
