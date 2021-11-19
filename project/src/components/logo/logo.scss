@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 135px;
+}
+
+.logo__link {
+  display: inline-block;
+  margin-left: 19px;
+  max-width: 60px;
+  color: $color-gray-2;
+  text-decoration: none;
+}
+
+.logo__name {
+  display: inline-block;
+  letter-spacing: 3px;
+
+  &--first {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &--second {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
