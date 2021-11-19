@@ -1,0 +1,33 @@
+@import '../../assets/scss/global.scss';
+@import '../site-page/site-page.scss';
+@import '../logo/logo.scss';
+
+.page, .page__body {
+  height: 100%;
+  font-family: $main-font-family;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.root{
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
