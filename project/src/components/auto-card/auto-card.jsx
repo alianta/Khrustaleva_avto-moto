@@ -3,16 +3,16 @@ import React from 'react';
 function AutoCard() {
   return (
     <article className="product">
-      <section className="produst-images">
-        <img className="produst-images__main" src="img/desktop-slide-1.jpg" width="600" height="375" alt="Фото Марпех 11"/>
-        <ul className="produst-images__list">
-          <li className="produst-images__item produst-images__item--current">
+      <section className="product-images">
+        <img className="product-images__main" src="img/desktop-slide-1.jpg" width="600" height="375" alt="Фото Марпех 11"/>
+        <ul className="product-images__list">
+          <li className="product-images__item product-images__item--current">
             <img src="img/desktop-slide-1-prev.jpg" width="128" height="80" alt="Фото снаружи"/>
           </li>
-          <li className="produst-images__item">
+          <li className="product-images__item">
             <img src="img/desktop-slide-2-prev.jpg" width="128" height="80" alt="Фото салона"/>
           </li>
-          <li className="produst-images__item">
+          <li className="product-images__item">
             <img src="img/desktop-slide-3-prev.jpg" width="128" height="80" alt="Фото приборной панели"/>
           </li>
         </ul>
