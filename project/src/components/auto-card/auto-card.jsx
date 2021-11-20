@@ -2,9 +2,14 @@ import React from 'react';
 
 function AutoCard() {
   return (
-    <article className="product">
+    <article className="product product--new">
       <section className="product-images">
         <img className="product-images__main" src="img/desktop-slide-1.jpg" width="600" height="375" alt="Фото Марпех 11"/>
+        <a className="product-images__button product-images__button--disable" href="/" aria-label="Предыдущее изображение">
+          <svg className="product-images__icon" width="20" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.004 6.172 6.918.369M1.004 6.172l5.689 5.797M1.004 6.172l18.977.18" />
+          </svg>
+        </a>
         <ul className="product-images__list">
           <li className="product-images__item product-images__item--current">
             <img src="img/desktop-slide-1-prev.jpg" width="128" height="80" alt="Фото снаружи"/>
@@ -16,6 +21,11 @@ function AutoCard() {
             <img src="img/desktop-slide-3-prev.jpg" width="128" height="80" alt="Фото приборной панели"/>
           </li>
         </ul>
+        <a className="product-images__button" href="/" aria-label="Следующее изображение">
+          <svg className="product-images__icon" width="20" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.987 6.172 13.075.369m5.912 5.803L13.3 11.969m5.687-5.797-18.972.18"/>
+          </svg>
+        </a>
       </section>
       <section className="product__short-information">
         <h2 className="product__name">Марпех 11</h2>
