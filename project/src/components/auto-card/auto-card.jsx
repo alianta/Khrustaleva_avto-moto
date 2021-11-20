@@ -30,17 +30,17 @@ function AutoCard() {
       <section className="product__short-information">
         <h2 className="product__name">Марпех 11</h2>
         <ul className="main-features-list">
-          <li className="main-features-list__item">бензин</li>
-          <li className="main-features-list__item">механика</li>
-          <li className="main-features-list__item">100 л.с.</li>
-          <li className="main-features-list__item">1.4 л</li>
+          <li className="main-features-list__item main-features-list__item--engine-type">бензин</li>
+          <li className="main-features-list__item main-features-list__item--transmission">механика</li>
+          <li className="main-features-list__item main-features-list__item--power">100 л.с.</li>
+          <li className="main-features-list__item main-features-list__item--volume">1.4 л</li>
         </ul>
         <div className="price">
           <span className="price__current">2 300 000 ₽</span>
           <span className="price__old">2  400 000 ₽</span>
         </div>
         <button className="button button--first" type="button">оставить заявку</button>
-        <button className="button button--second" type="button">В КРЕДИТ ОТ 11 000 ₽</button>
+        <button className="button button--second" type="button">в кредит от 11 000 ₽</button>
       </section>
     </article>
   );

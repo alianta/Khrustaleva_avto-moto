@@ -49,10 +49,6 @@
   margin-top: 38px;
 }
 
-.main-features-list {
-  list-style: none;
-}
-
 .product-images__item {
   margin: 12px;
 }
@@ -73,6 +69,123 @@
       stroke: $color-gray-3;
     }
   }
+}
 
+.product__short-information{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
+.product__name {
+  font-size: 30px;
+  line-height: 40px;
+  color: $color-gray-2;
+}
+
+.main-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-gray-2;
+  opacity: 0.5;
+}
+
+.main-features-list__item {
+  position: relative;
+  min-width: 70px;
+  text-align: center;
+  padding-top: 30px;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &--engine-type {
+    &::before {
+      width: 24px;
+      height: 22px;
+      background-image: url("../../assets/img/icons/engine-type.svg");
+    }
+  }
+
+  &--transmission {
+    &::before {
+      width: 26px;
+      height: 24px;
+      background-image: url("../../assets/img/icons/transmission.svg");
+    }
+  }
+
+  &--power {
+    &::before {
+      width: 32px;
+      height: 21px;
+      background-image: url("../../assets/img/icons/power.svg");
+    }
+  }
+
+  &--volume {
+    &::before {
+      width: 30px;
+      height: 23px;
+      background-image: url("../../assets/img/icons/volume.svg");
+    }
+  }
+}
+
+.price__current {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 48px;
+  color: $color-gray-2;
+}
+
+.price__old {
+  position: relative;
+  font-family: $second-font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  color: $color-gray-4;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 60%;
+    background-image: linear-gradient(to top left, transparent 45%, $color-gray-4, transparent 55%);
+    top: 3px;
+    left: -5px;
+  }
+}
+
+.button {
+  padding: 16px 20px;
+  cursor: pointer;
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  width: fit-content;
+
+  &--first {
+    background-color: $color-red-1;
+    border: none;
+    color: $color-white-1;
+  }
+  &--second {
+    background-color: $color-white-1;
+    border: 1px solid $color-red-1;
+    color: $color-red-1;
+  }
 }
