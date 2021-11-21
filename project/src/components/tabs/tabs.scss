@@ -1,0 +1,28 @@
+.information {
+  padding: 46px 0 0 6px;
+  width: 100%;
+}
+
+.information__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.information__item {
+  box-sizing: border-box;
+  padding: 14px;
+  min-width: 195px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: $color-gray-2;
+  border: 1px solid $color-gray-3;
+
+  &--active {
+    color: $color-white-1;
+    background-color: $color-red-1;
+    border-color: $color-red-1;
+  }
+}
