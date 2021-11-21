@@ -1,11 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
+import {SLIDER_IMAGE_COUNT, SliderImages, SLIDER_PREV_BUTTON_NAME, SLIDER_NEXT_BUTTON_NAME} from '../../const';
 
 function AutoCard() {
+  const [activeSliderImage, setActiveSliderImage] = useState(0);
+
+  const handleSliderChange = (e) => {
+    e.preventDefault();
+    if(e.target.getAttribute('aria-label') === SLIDER_PREV_BUTTON_NAME) {
+      setActiveSliderImage(activeSliderImage - 1);
+    } else if(e.target.getAttribute('aria-label') === SLIDER_NEXT_BUTTON_NAME) {
+      setActiveSliderImage(activeSliderImage + 1);
+    }
+  };
+
   return (
     <article className="product product--new">
       <section className="product-images">
-        <img className="product-images__main" src="img/desktop-slide-1.jpg" width="600" height="375" alt="Фото Марпех 11"/>
-        <a className="product-images__button product-images__button--disable" href="/" aria-label="Предыдущее изображение">
+        <img className="product-images__main" src={SliderImages[activeSliderImage]} width="600" height="375" alt="Фото Марпех 11"/>
+        <a
+          className={activeSliderImage === 0? 'product-images__button product-images__button--disable' :'product-images__button'}
+          href="/"
+          aria-label={SLIDER_PREV_BUTTON_NAME}
+          onClick = {handleSliderChange}
+        >
           <svg className="product-images__icon" width="20" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.004 6.172 6.918.369M1.004 6.172l5.689 5.797M1.004 6.172l18.977.18" />
           </svg>
@@ -21,7 +38,12 @@ function AutoCard() {
             <img src="img/desktop-slide-3-prev.jpg" width="128" height="80" alt="Фото приборной панели"/>
           </li>
         </ul>
-        <a className="product-images__button" href="/" aria-label="Следующее изображение">
+        <a
+          className={activeSliderImage + 1 === SLIDER_IMAGE_COUNT?'product-images__button product-images__button--disable' : 'product-images__button'}
+          href="/"
+          aria-label={SLIDER_NEXT_BUTTON_NAME}
+          onClick = {handleSliderChange}
+        >
           <svg className="product-images__icon" width="20" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.987 6.172 13.075.369m5.912 5.803L13.3 11.969m5.687-5.797-18.972.18"/>
           </svg>
