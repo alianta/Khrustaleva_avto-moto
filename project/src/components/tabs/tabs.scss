@@ -25,25 +25,3 @@
     border-color: $color-red-1;
   }
 }
-
-.specifications {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin-top: 0;
-  max-width: 565px;
-}
-
-.specifications__item {
-  padding-top: 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $color-gray-3;
-  color: $color-gray-2;
-}
-.specifications__value {
-  float: right;
-  color: $color-black-1;
-}
-
-

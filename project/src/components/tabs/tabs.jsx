@@ -1,43 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {TabNumbers} from '../../const';
+import Specification from '../specification/specification';
+import Reviews from '../reviews/reviews';
+import Contacts from '../contacts/contacts';
 
 function Tabs() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const changeActiveTab = (tabNumber) => {
+    switch(tabNumber){
+      case TabNumbers.CONTACTS:
+        return <Contacts/>;
+      case TabNumbers.REVIEWS:
+        return <Reviews/>;
+      default:
+        return <Specification/>;
+    }
+  };
+
   return (
     <div className="information">
       <ul className="information__list">
-        <li className="information__item information__item--active">Характеристики</li>
-        <li className="information__item">Отзывы</li>
-        <li className="information__item">Контакты</li>
-      </ul>
-      <ul className="specifications">
-        <li className="specifications__item">
-          <span className="specifications__title">Трансмиссия</span>
-          <span className="specifications__value">Роботизированная</span>
+        <li
+          className={activeTab === TabNumbers.DEFAULT? 'information__item information__item--active' :'information__item'}
+          onClick={() => {setActiveTab(TabNumbers.DEFAULT);}}
+        >Характеристики
         </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Мощность двигателя, л.с.</span>
-          <span className="specifications__value">249</span>
+        <li
+          className={activeTab === TabNumbers.REVIEWS? 'information__item information__item--active' :'information__item'}
+          onClick={() => {setActiveTab(TabNumbers.REVIEWS);}}
+        >Отзывы
         </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Тип двигателя</span>
-          <span className="specifications__value">Бензиновый</span>
-        </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Привод</span>
-          <span className="specifications__value">Полный</span>
-        </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Объем двигателя, л</span>
-          <span className="specifications__value">2.4</span>
-        </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Макс. крутящий момент</span>
-          <span className="specifications__value">370/4500</span>
-        </li>
-        <li className="specifications__item">
-          <span className="specifications__title">Количество цилиндров</span>
-          <span className="specifications__value">4</span>
+        <li
+          className={activeTab === TabNumbers.CONTACTS? 'information__item information__item--active' :'information__item'}
+          onClick={() => {setActiveTab(TabNumbers.CONTACTS);}}
+        >Контакты
         </li>
       </ul>
+      {changeActiveTab(activeTab)}
     </div>
   );
 }
