@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {SLIDER_IMAGE_COUNT, SliderImages, SLIDER_PREV_BUTTON_NAME, SLIDER_NEXT_BUTTON_NAME} from '../../const';
+import Tabs from '../tabs/tabs';
 
 function AutoCard() {
   const [activeSliderImage, setActiveSliderImage] = useState(0);
@@ -64,6 +65,7 @@ function AutoCard() {
         <button className="button button--first" type="button">оставить заявку</button>
         <button className="button button--second" type="button">в кредит от 11 000 ₽</button>
       </section>
+      <Tabs/>
     </article>
   );
 }

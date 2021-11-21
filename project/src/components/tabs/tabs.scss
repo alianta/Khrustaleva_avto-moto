@@ -1,0 +1,39 @@
+.information__list {
+  list-style: none;
+  display: flex;
+}
+
+.information__item {
+  padding: 14px;
+  min-width: 195px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: $color-gray-2;
+  border: 1px solid $color-gray-3;
+
+  &--active {
+    color: $color-white-1;
+    background-color: $color-red-1;
+    border-color: $color-red-1;
+  }
+}
+
+.specifications {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.specifications__item {
+  padding-top: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color-gray-3;
+  color: $color-gray-2;
+}
+.specifications__value {
+  float: right;
+  color: $color-black-1;
+}
+
+
