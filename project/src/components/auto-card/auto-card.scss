@@ -32,6 +32,10 @@
   }
 }
 
+.product-images__main {
+  background-color: $color-gray-2;
+}
+
 .product-images__button {
   display: block;
   width: 52px;
@@ -55,6 +59,9 @@
 
 .product-images__item {
   margin: 12px;
+  background-color: $color-gray-2;
+  width: 128px;
+  height: 80px;
 }
 
 .product-images__button {
