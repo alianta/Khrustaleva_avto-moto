@@ -1,7 +1,8 @@
 .header {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px 0;
+  padding: 15px 5px;
+  box-sizing: border-box;
   color: $color-gray-2;
   max-width: $desktop-width;
   margin: 0 auto;
