@@ -20,3 +20,10 @@ export const TabNumbers ={
   REVIEWS: 1,
   CONTACTS: 2,
 };
+export const MapSettings = {
+  CENTER: {
+    lat: 59.96812539,
+    lng: 30.31663835,
+  },
+  ZOOM: 14,
+};
