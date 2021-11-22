@@ -1,0 +1,24 @@
+.footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $desktop-width;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  list-style: none;
+  padding: 15px 6px;
+}
+
+.footer__item {
+  margin: 15px 0;
+}
+
+.footer__link {
+  color: $color-gray-2;
+  text-decoration: none;
+}
