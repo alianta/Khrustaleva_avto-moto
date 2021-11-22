@@ -204,6 +204,8 @@
     color: $color-white-1;
   }
   &--second {
+    font-weight: 400;
+    letter-spacing: 0.13em;
     background-color: $color-white-1;
     border: 1px solid $color-red-1;
     color: $color-red-1;
