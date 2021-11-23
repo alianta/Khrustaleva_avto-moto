@@ -8,6 +8,7 @@
 @import '../reviews/reviews.scss';
 @import '../contacts//contacts.scss';
 @import '../footer/footer.scss';
+@import '../add-review/add-review.scss';
 
 .page, .page__body {
   height: 100%;
@@ -19,6 +20,7 @@
 }
 
 .root{
+  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
