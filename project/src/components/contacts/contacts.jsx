@@ -2,13 +2,19 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import {MapSettings} from '../../const';
 
-function Marker () {
-  return (
-    <div className="marker"></div>
-  );
-}
+const MAP_PIN = './img/map-pin.svg';
 
 function Contacts() {
+
+  const renderMarkers = (map, maps) => {
+    const marker = new maps.Marker({
+      position: { lat: MapSettings.CENTER.lat, lng: MapSettings.CENTER.lng },
+      map,
+      icon: MAP_PIN,
+    });
+    return marker;
+  };
+
   return (
     <div className="contacts">
       <ul className="contacts__info">
@@ -38,11 +44,8 @@ function Contacts() {
             fullscreenControl: false,
             zoomControl: false,
           }}
+          onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
         >
-          <Marker
-            lat={MapSettings.CENTER.lat}
-            lng={MapSettings.CENTER.lng}
-          />
         </GoogleMapReact>
       </div>
     </div>
