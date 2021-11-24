@@ -5,6 +5,7 @@ const RATING_STAR_COUNT = 5;
 
 function AddReview() {
   const [rating, setRating] = useState(0);
+  const [selectingRatingValue, setSelectingRatingValue] = useState(0);
   const [popUpStatus, setPopUpStatus] = useState(0);
   const [name, setName] = useState('');
   const [pros, setPros] = useState('');
@@ -74,7 +75,15 @@ function AddReview() {
                         setRating(+target.value+1);
                       }}
                     />
-                    <label className={`rating__label ${rating>=id+1?'rating__label--active':''}`} htmlFor={`star-${id}`}></label>
+                    <label
+                      className={`rating__label ${rating>=id+1||selectingRatingValue>=id+1?'rating__label--active':''}`}
+                      value={`${id}`}
+                      onMouseEnter={({target}) => {
+                        setSelectingRatingValue(id+1);
+                      }}
+                      htmlFor={`star-${id}`}
+                    >
+                    </label>
                   </React.Fragment>
                 );
               })
