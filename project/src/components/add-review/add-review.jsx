@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const RATING_STAR_COUNT = 5;
 
 function AddReview() {
+  const [rating, setRating] = useState(0);
+  /* eslint-disable no-console */
+  console.log('rating:',rating);
+  /* eslint-enable no-console */
   return (
     <div className="pop-up">
       <button className="pop-up__close-button"type="button">Закрыть</button>
@@ -26,21 +30,20 @@ function AddReview() {
             {
               Array.from({length: RATING_STAR_COUNT}).map((_, id) => {
                 const keyValue = `star-${id}`;
-                const currentId = RATING_STAR_COUNT-id;
                 return (
                   <React.Fragment key={keyValue}>
                     <input
                       className="rating__input"
-                      id={`star-${currentId}`}
+                      id={`star-${id}`}
                       type="radio"
                       name="rating"
-                      value={`${currentId}`}
+                      value={`${id}`}
                       onChange={({target}) => {
-                        /*setRating(target.value);
-                        setSubmitButtonDisabled(getSubmitButtonStatus(target.value, review.length));*/
+                        setRating(+target.value+1);
+                        /*setSubmitButtonDisabled(getSubmitButtonStatus(target.value, review.length));*/
                       }}
                     />
-                    <label className="rating__label" htmlFor={`star-${currentId}`}>Rating ${currentId}</label>
+                    <label className={`rating__label ${rating>=id+1?'rating__label--active':''}`} htmlFor={`star-${id}`}></label>
                   </React.Fragment>
                 );
               })
