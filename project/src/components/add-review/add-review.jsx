@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const RATING_STAR_COUNT = 5;
 
@@ -19,6 +19,19 @@ function AddReview() {
     localStorage.setItem('rating', rating);
     localStorage.setItem('comment', comment);
   };
+
+  useEffect(() => {
+    const handleEsc = (evt) => {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        setPopUpStatus(1);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
 
   return (
     <div id="pop-up" className={`pop-up ${popUpStatus?'pop-up--close':''}`} onMouseUp={(evt)=>evt.target.id === 'pop-up'?setPopUpStatus(1):''}>
