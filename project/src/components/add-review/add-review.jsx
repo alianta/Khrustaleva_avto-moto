@@ -4,13 +4,16 @@ const RATING_STAR_COUNT = 5;
 
 function AddReview() {
   const [rating, setRating] = useState(0);
-  /* eslint-disable no-console */
-  console.log('rating:',rating);
-  /* eslint-enable no-console */
+  const [popUpStatus, setPopUpStatus] = useState(0);
   return (
-    <div className="pop-up">
+    <div className={`pop-up ${popUpStatus?'pop-up--close':''}`}>
       <form id="add-review-form" className="review-form" action="https://echo.htmlacademy.ru/" method="get">
-        <button className="pop-up__close-button" type="button"></button>
+        <button
+          className="pop-up__close-button"
+          type="button"
+          onClick={() => setPopUpStatus(1)}
+        >
+        </button>
         <h2 className="review-form__title">Оставить отзыв</h2>
         <div className="review-form__field required">
           <label className="review-form__label visually-hidden" htmlFor="review-form__name">Имя</label>
