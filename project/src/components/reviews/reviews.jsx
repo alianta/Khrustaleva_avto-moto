@@ -41,6 +41,25 @@ function Reviews() {
             <button className="review-footer__button">Ответить</button>
           </div>
         </li>
+        {localStorage.getItem('name')?
+          <li className="review-item">
+            <h3 className="review-item__author">{localStorage.getItem('name')}</h3>
+            <dl className="pros-and-cons">
+              <dt className="pros-and-cons__title pros-and-cons__title--first">Достоинства</dt>
+              <dd className="pros-and-cons__text">{localStorage.getItem('pros')}</dd>
+              <dt className="pros-and-cons__title">Недостатки</dt>
+              <dd className="pros-and-cons__text">{localStorage.getItem('cons')}</dd>
+            </dl>
+            <div className="comment">
+              <h3 className="comment__title">Комментарий</h3>
+              <p className="comment__text">{localStorage.getItem('comment')}</p>
+            </div>
+            <span className="review-rating review-rating--match">Советует</span>
+            <div className="review-footer">
+              <time className="review-footer__date"  dateTime="2021-11-22T18:18">1 минуту назад</time>
+              <button className="review-footer__button">Ответить</button>
+            </div>
+          </li>:''}
       </ul>
     </div>
   );

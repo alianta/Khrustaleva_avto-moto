@@ -18,6 +18,7 @@ function AddReview() {
     localStorage.setItem('cons', cons);
     localStorage.setItem('rating', rating);
     localStorage.setItem('comment', comment);
+    setPopUpStatus(1);
   };
 
   useEffect(() => {
