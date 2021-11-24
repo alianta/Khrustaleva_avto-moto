@@ -5,7 +5,7 @@
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 28px;
-  grid-template-rows: repeat(5, min-content);
+  grid-template-rows: repeat(6, min-content);
   grid-row-gap: 14px;
   box-sizing: border-box;
   position: fixed;
@@ -15,6 +15,35 @@
 	background-color: $color-gray-1;
 	padding: 35px;
 	margin: 0 auto;
+}
+
+.pop-up__close-button {
+  position: relative;
+  grid-column: 1 / -1;
+  width: 15px;
+  height: 15px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &::before, &::after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    height: 19px;
+    width: 2px;
+    background-color: $color-gray-7;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .review-form__title {

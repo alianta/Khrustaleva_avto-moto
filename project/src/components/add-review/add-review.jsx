@@ -9,8 +9,8 @@ function AddReview() {
   /* eslint-enable no-console */
   return (
     <div className="pop-up">
-      <button className="pop-up__close-button"type="button">Закрыть</button>
       <form id="add-review-form" className="review-form" action="https://echo.htmlacademy.ru/" method="get">
+        <button className="pop-up__close-button" type="button"></button>
         <h2 className="review-form__title">Оставить отзыв</h2>
         <div className="review-form__field required">
           <label className="review-form__label visually-hidden" htmlFor="review-form__name">Имя</label>
