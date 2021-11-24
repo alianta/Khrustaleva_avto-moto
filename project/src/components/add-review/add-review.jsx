@@ -21,7 +21,7 @@ function AddReview() {
   };
 
   return (
-    <div className={`pop-up ${popUpStatus?'pop-up--close':''}`} >
+    <div id="pop-up" className={`pop-up ${popUpStatus?'pop-up--close':''}`} onMouseUp={(evt)=>evt.target.id === 'pop-up'?setPopUpStatus(1):''}>
       <form id="add-review-form" className="review-form" onSubmit={onFormSubmit}>
         <button
           className="pop-up__close-button"
