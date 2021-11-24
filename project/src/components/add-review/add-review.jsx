@@ -46,7 +46,7 @@ function AddReview() {
         <h2 className="review-form__title">Оставить отзыв</h2>
         <div className="review-form__field required">
           <label className="review-form__label visually-hidden" htmlFor="review-form__name">Имя</label>
-          <input id="review-form__name" className="review-form__input" type="text" name="name" placeholder="Имя" onChange={(evt) => setName(evt.target.value)}/>
+          <input id="review-form__name" className="review-form__input" type="text" name="name" placeholder="Имя" onChange={(evt) => setName(evt.target.value)} autoFocus/>
         </div>
         <div className="review-form__field">
           <label className="review-form__label visually-hidden" htmlFor="review-form__pros">Достоинства</label>
