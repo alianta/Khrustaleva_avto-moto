@@ -15,6 +15,7 @@ export const SliderImages = [
 ];
 export const SLIDER_PREV_BUTTON_NAME = 'Предыдущее изображение';
 export const SLIDER_NEXT_BUTTON_NAME = 'Следующее изображение';
+export const POPUP_CLOSE_BUTTON_ID = 'review-button';
 export const TabNumbers ={
   DEFAULT: 0,
   REVIEWS: 1,

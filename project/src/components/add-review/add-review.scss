@@ -172,8 +172,6 @@
   width: 100%;
   height: 100%;
   background-color: $color-gray-5;
-
-  &--close {
-    display: none;
-  }
+  top: 0;
+  z-index: 1;
 }

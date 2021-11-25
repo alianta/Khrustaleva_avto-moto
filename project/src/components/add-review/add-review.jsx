@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import PropTypes from 'prop-types';
 
 const RATING_STAR_COUNT = 5;
 
-
-function AddReview() {
+function AddReview({onPopUpClose}) {
   const [rating, setRating] = useState(0);
   const [selectingRatingValue, setSelectingRatingValue] = useState(0);
-  const [popUpStatus, setPopUpStatus] = useState(0);
   const [name, setName] = useState('');
   const [pros, setPros] = useState('');
   const [cons, setCons] = useState('');
@@ -19,13 +18,13 @@ function AddReview() {
     localStorage.setItem('cons', cons);
     localStorage.setItem('rating', rating);
     localStorage.setItem('comment', comment);
-    setPopUpStatus(1);
+    onPopUpClose();
   };
 
   useEffect(() => {
     const handleEsc = (evt) => {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
-        setPopUpStatus(1);
+        onPopUpClose();
       }
     };
     window.addEventListener('keydown', handleEsc);
@@ -33,15 +32,15 @@ function AddReview() {
     return () => {
       window.removeEventListener('keydown', handleEsc);
     };
-  }, []);
+  });
 
   return (
-    <div id="pop-up" className={`pop-up ${popUpStatus?'pop-up--close':''}`} onMouseUp={(evt)=>evt.target.id === 'pop-up'?setPopUpStatus(1):''}>
+    <div id="pop-up" className='pop-up' onMouseUp={(evt)=>evt.target.id === 'pop-up'?onPopUpClose():''}>
       <form id="add-review-form" className="review-form" onSubmit={onFormSubmit}>
         <button
           className="pop-up__close-button"
           type="button"
-          onClick={() => setPopUpStatus(1)}
+          onClick={() => onPopUpClose()}
         >
         </button>
         <h2 className="review-form__title">Оставить отзыв</h2>
@@ -99,5 +98,9 @@ function AddReview() {
     </div>
   );
 }
+
+AddReview.propTypes = {
+  onPopUpClose: PropTypes.func.isRequired,
+};
 
 export default AddReview;

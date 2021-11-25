@@ -1,9 +1,10 @@
 import React from 'react';
+import {POPUP_CLOSE_BUTTON_ID} from '../../const';
 
 function Reviews() {
   return (
     <div className="reviews">
-      <button className="button button--third">Оставить отзыв</button>
+      <button id={POPUP_CLOSE_BUTTON_ID} className="button button--third">Оставить отзыв</button>
       <ul className="reviews-list">
         <li className="review-item">
           <h3 className="review-item__author">Борис Иванов</h3>
