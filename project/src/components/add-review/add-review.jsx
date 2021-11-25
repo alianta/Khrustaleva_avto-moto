@@ -69,7 +69,7 @@ function AddReview({onPopUpClose}) {
           <label className="review-form__label visually-hidden" htmlFor="review-form__cons">Недостатки</label>
           <input id="review-form__cons" className="review-form__input" type="text" name="cons" placeholder="Недостатки" onChange={(evt) => setCons(evt.target.value)}/>
         </div>
-        <div className="review-form__field">
+        <div className="review-form__field review-form__field--first">
           <span className="review-form__label">Оцените товар:</span>
           <div className="rating">
             {

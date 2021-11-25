@@ -56,6 +56,7 @@
 	line-height: 34px;
 	color: $color-gray-2;
   margin-top: -20px;
+  margin-bottom: 10px;
   padding-right: 5px;
 }
 
@@ -63,6 +64,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--first {
+    flex-direction: row;
+    height: 100%;
+    padding-top: 6px;
+  }
 
   &--last{
     grid-row: -2 / -4;
@@ -145,6 +152,8 @@
   justify-self: center;
   min-width: 190px;
   padding: 16px 20px;
+  margin-bottom: 35px;
+  margin-top: 20px;
   font-family: $main-font-family;
   font-weight: 600;
   font-size: 14px;
@@ -163,7 +172,9 @@
 
 .rating {
   display: flex;
-  margin-left: 14px;
+  justify-content: space-between;
+  width: 55%;
+  margin-left: auto;
 }
 .rating__input {
   display: none;
@@ -173,12 +184,7 @@
   font-size: 0;
   line-height: 0;
   display: block;
-  padding-right: 6px;
   cursor: pointer;
-
-  &:first-child {
-    padding-right: 0;
-  }
 
   &::after {
     content: '★';
