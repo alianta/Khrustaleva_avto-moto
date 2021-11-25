@@ -65,9 +65,11 @@
   margin-top: 13px;
   border-radius: 50%;
   border: 1px solid $color-gray-3;
+  cursor: pointer;
 
   .product-images__icon{
     stroke: $color-gray-2;
+    z-index: -1;
   }
 
   &--disable {
