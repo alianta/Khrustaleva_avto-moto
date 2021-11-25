@@ -10,15 +10,28 @@ function AddReview({onPopUpClose}) {
   const [pros, setPros] = useState('');
   const [cons, setCons] = useState('');
   const [comment, setComment] = useState('');
+  const [isNameEmptyError, setIsNameEmptyError] = useState(false);
+  const [isCommentEmptyError, setIsCommentEmptyError] = useState(false);
 
   const onFormSubmit = (evt) => {
     evt.preventDefault();
-    localStorage.setItem('name', name);
-    localStorage.setItem('pros', pros);
-    localStorage.setItem('cons', cons);
-    localStorage.setItem('rating', rating);
-    localStorage.setItem('comment', comment);
-    onPopUpClose();
+    if (name === '' && comment === '') {
+      setIsNameEmptyError(true);
+      setIsCommentEmptyError(true);
+    }else if (comment === '') {
+      setIsCommentEmptyError(true);
+      setIsNameEmptyError(false);
+    }else if (name === '') {
+      setIsCommentEmptyError(false);
+      setIsNameEmptyError(true);
+    }else{
+      localStorage.setItem('name', name);
+      localStorage.setItem('pros', pros);
+      localStorage.setItem('cons', cons);
+      localStorage.setItem('rating', rating);
+      localStorage.setItem('comment', comment);
+      onPopUpClose();
+    }
   };
 
   useEffect(() => {
@@ -44,7 +57,8 @@ function AddReview({onPopUpClose}) {
         >
         </button>
         <h2 className="review-form__title">Оставить отзыв</h2>
-        <div className="review-form__field required">
+        <div className={`review-form__field required ${isNameEmptyError?'required--error':''}`}>
+          <span className={`review-form__error ${isNameEmptyError?'':'visually-hidden'}`}>Пожалуйста, заполните поле</span>
           <label className="review-form__label visually-hidden" htmlFor="review-form__name">Имя</label>
           <input id="review-form__name" className="review-form__input" type="text" name="name" placeholder="Имя" onChange={(evt) => setName(evt.target.value)} autoFocus/>
         </div>
@@ -89,7 +103,8 @@ function AddReview({onPopUpClose}) {
             }
           </div>
         </div>
-        <div className="review-form__field  review-form__field--last required">
+        <div className={`review-form__field  review-form__field--last required ${isCommentEmptyError?'required--error':''}`}>
+          <span className={`review-form__error ${isCommentEmptyError?'':'visually-hidden'}`}>Пожалуйста, заполните поле</span>
           <label className="review-form__label visually-hidden" htmlFor="review-form__comment">Комментарий</label>
           <textarea id="review-form__comment" className="review-form__comment"  name="comment" placeholder="Комментарий" onChange={(evt) => setComment(evt.target.value)}></textarea>
         </div>

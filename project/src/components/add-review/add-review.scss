@@ -57,6 +57,7 @@
 
 .review-form__field {
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   &--last{
@@ -84,6 +85,15 @@
   color: $color-black-1;
 }
 
+.review-form__error {
+  align-self: flex-start;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-red-2;
+  margin-bottom: 3px;
+}
+
 .review-form__comment {
   box-sizing: border-box;
 	width: 300px;
@@ -108,6 +118,12 @@
     top: 9px;
     left: 12px;
     background-image: url('../../assets/img/icons/star.svg');
+  }
+
+  &--error {
+    &::before{
+      top: 29px;
+    }
   }
 }
 
