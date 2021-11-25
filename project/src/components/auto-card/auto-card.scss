@@ -65,9 +65,11 @@
   margin-top: 13px;
   border-radius: 50%;
   border: 1px solid $color-gray-3;
+  cursor: pointer;
 
   .product-images__icon{
     stroke: $color-gray-2;
+    z-index: -1;
   }
 
   &--disable {
@@ -196,12 +198,17 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   width: fit-content;
+  cursor: pointer;
 
   &--first {
     margin-bottom: 17px;
     background-color: $color-red-1;
     border: none;
     color: $color-white-1;
+
+    &:hover {
+      background-color: $color-red-3;
+    }
   }
   &--second {
     font-weight: 400;
@@ -209,5 +216,10 @@
     background-color: $color-white-1;
     border: 1px solid $color-red-1;
     color: $color-red-1;
+
+    &:hover {
+      color: $color-white-1;
+      background-color: $color-red-1;
+    }
   }
 }

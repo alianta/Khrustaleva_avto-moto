@@ -19,6 +19,12 @@
   text-align: center;
   color: $color-gray-2;
   border: 1px solid $color-gray-3;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-white-1;
+    background-color: $color-red-3;
+  }
 
   &--active {
     color: $color-white-1;

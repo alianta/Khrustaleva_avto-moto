@@ -1,4 +1,5 @@
 export const SLIDER_IMAGE_COUNT = 3;
+export const RATING_STAR_COUNT = 5;
 export const SliderImages = [
   {
     standard: 'img/desktop-slide-1.jpg',
@@ -13,8 +14,10 @@ export const SliderImages = [
     retina: 'img/desktop-slide-3@2x.jpg',
   },
 ];
+export const RatingNames = ['Кошмар','Плохо','Не очень','Советует','Хорошо','Замечательно'];
 export const SLIDER_PREV_BUTTON_NAME = 'Предыдущее изображение';
 export const SLIDER_NEXT_BUTTON_NAME = 'Следующее изображение';
+export const POPUP_CLOSE_BUTTON_ID = 'review-button';
 export const TabNumbers ={
   DEFAULT: 0,
   REVIEWS: 1,
