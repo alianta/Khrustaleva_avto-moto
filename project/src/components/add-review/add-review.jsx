@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {RATING_STAR_COUNT} from '../../const';
 import PropTypes from 'prop-types';
-
-const RATING_STAR_COUNT = 5;
 
 function AddReview({onPopUpClose}) {
   const [rating, setRating] = useState(0);
@@ -60,7 +59,7 @@ function AddReview({onPopUpClose}) {
         <div className={`review-form__field required ${isNameEmptyError?'required--error':''}`}>
           <span className={`review-form__error ${isNameEmptyError?'':'visually-hidden'}`}>Пожалуйста, заполните поле</span>
           <label className="review-form__label visually-hidden" htmlFor="review-form__name">Имя</label>
-          <input id="review-form__name" className="review-form__input" type="text" name="name" placeholder="Имя" onChange={(evt) => setName(evt.target.value)} autoFocus/>
+          <input id="review-form__name" className={`review-form__input ${isNameEmptyError?'review-form__input--error':''}`} type="text" name="name" placeholder="Имя" onChange={(evt) => setName(evt.target.value)} autoFocus/>
         </div>
         <div className="review-form__field">
           <label className="review-form__label visually-hidden" htmlFor="review-form__pros">Достоинства</label>
@@ -106,7 +105,7 @@ function AddReview({onPopUpClose}) {
         <div className={`review-form__field  review-form__field--last required ${isCommentEmptyError?'required--error':''}`}>
           <span className={`review-form__error ${isCommentEmptyError?'':'visually-hidden'}`}>Пожалуйста, заполните поле</span>
           <label className="review-form__label visually-hidden" htmlFor="review-form__comment">Комментарий</label>
-          <textarea id="review-form__comment" className="review-form__comment"  name="comment" placeholder="Комментарий" onChange={(evt) => setComment(evt.target.value)}></textarea>
+          <textarea id="review-form__comment" className={`review-form__comment ${isCommentEmptyError?'review-form__comment--error':''}`} name="comment" placeholder="Комментарий" onChange={(evt) => setComment(evt.target.value)}></textarea>
         </div>
         <button className="review-form__submit" type="submit">Оставить отзыв</button>
       </form>
