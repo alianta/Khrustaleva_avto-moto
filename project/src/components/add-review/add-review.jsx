@@ -53,6 +53,7 @@ function AddReview({onPopUpClose}) {
           className="pop-up__close-button"
           type="button"
           onClick={() => onPopUpClose()}
+          aria-label='Закрыть'
         >
         </button>
         <h2 className="review-form__title">Оставить отзыв</h2>
@@ -96,6 +97,7 @@ function AddReview({onPopUpClose}) {
                         setSelectingRatingValue(id+1);
                       }}
                       htmlFor={`star-${id}`}
+                      aria-label={`Рейтинг ${id+1}`}
                     >
                     </label>
                   </React.Fragment>
