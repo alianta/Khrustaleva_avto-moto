@@ -89,7 +89,6 @@ function AddReview({onPopUpClose}) {
                     />
                     <label
                       className={`rating__label ${rating>=id+1||selectingRatingValue>=id+1?'rating__label--active':''}`}
-                      value={`${id}`}
                       onMouseEnter={({target}) => {
                         setSelectingRatingValue(id+1);
                       }}
