@@ -8,3 +8,9 @@
   max-width: $desktop-width;
   margin: 0 auto;
 }
+.site-page {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+}

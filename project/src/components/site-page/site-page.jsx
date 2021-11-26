@@ -10,11 +10,12 @@ function SitePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const onPopUpClose = () => setIsModalOpen(false);
   return (
-    <div onClick={(evt)=>{
-      if(evt.target.id === POPUP_CLOSE_BUTTON_ID) {
-        setIsModalOpen(true);
-      }
-    }}
+    <div className="site-page"
+      onClick={(evt)=>{
+        if(evt.target.id === POPUP_CLOSE_BUTTON_ID) {
+          setIsModalOpen(true);
+        }
+      }}
     >
       <div className="wrapper">
         <header className="header">
