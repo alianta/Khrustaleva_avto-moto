@@ -53,6 +53,7 @@ function AddReview({onPopUpClose}) {
           className="pop-up__close-button"
           type="button"
           onClick={() => onPopUpClose()}
+          aria-label='Закрыть'
         >
         </button>
         <h2 className="review-form__title">Оставить отзыв</h2>
@@ -71,7 +72,10 @@ function AddReview({onPopUpClose}) {
         </div>
         <div className="review-form__field review-form__field--first">
           <span className="review-form__label">Оцените товар:</span>
-          <div className="rating">
+          <div
+            className="rating"
+            onMouseLeave={() =>rating === 0?setSelectingRatingValue(0):''}
+          >
             {
               Array.from({length: RATING_STAR_COUNT}).map((_, id) => {
                 const keyValue = `star-${id}`;
@@ -89,11 +93,11 @@ function AddReview({onPopUpClose}) {
                     />
                     <label
                       className={`rating__label ${rating>=id+1||selectingRatingValue>=id+1?'rating__label--active':''}`}
-                      value={`${id}`}
                       onMouseEnter={({target}) => {
                         setSelectingRatingValue(id+1);
                       }}
                       htmlFor={`star-${id}`}
+                      aria-label={`Рейтинг ${id+1}`}
                     >
                     </label>
                   </React.Fragment>

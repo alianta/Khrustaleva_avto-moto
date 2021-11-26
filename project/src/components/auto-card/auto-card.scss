@@ -67,6 +67,10 @@
   border: 1px solid $color-gray-3;
   cursor: pointer;
 
+  &:hover {
+    border-color: $color-red-1;
+  }
+
   .product-images__icon{
     stroke: $color-gray-2;
     z-index: -1;

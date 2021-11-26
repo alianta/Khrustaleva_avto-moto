@@ -16,6 +16,7 @@ function AutoCard() {
 
   return (
     <article className="product product--new">
+      <h2 className="visually-hidden">Марпех 11</h2>
       <section className="product-images">
         <img className="product-images__main" src={SliderImages[activeSliderImage].standard} srcSet={`${SliderImages[activeSliderImage].retina} 2x`} width="600" height="375" alt="Фото Марпех 11"/>
         <a
