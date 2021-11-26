@@ -1,11 +1,10 @@
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 0 0 auto;
-  padding: 0;
-  max-width: 80%;
+  margin: 0;
+  //padding: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -13,7 +12,11 @@
 }
 
 .main-nav__item {
-  margin: 15px 0 15px 68px;
+  margin: 10px 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .main-nav__link {
