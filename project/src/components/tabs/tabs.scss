@@ -31,5 +31,11 @@
     color: $color-white-1;
     background-color: $color-red-1;
     border-color: $color-red-1;
+
+    &:hover {
+      color: $color-white-1;
+      background-color: $color-red-1;
+      cursor: default;
+    }
   }
 }
