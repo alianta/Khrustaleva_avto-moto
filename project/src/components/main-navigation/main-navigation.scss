@@ -19,4 +19,8 @@
 .main-nav__link {
   color: $color-gray-2;
   text-decoration: none;
+
+  &:hover {
+    color: $color-red-1;
+  }
 }
