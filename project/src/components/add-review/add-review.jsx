@@ -47,7 +47,7 @@ function AddReview({onPopUpClose}) {
   });
 
   return (
-    <div id="pop-up" className='pop-up' onMouseUp={(evt)=>evt.target.id === 'pop-up'?onPopUpClose():''}>
+    <div id="pop-up" className='pop-up' onMouseUp={(evt)=>evt.target.id === 'pop-up'?onPopUpClose():''} method="post" action="https://echo.htmlacademy.ru/" >
       <form id="add-review-form" className="review-form" onSubmit={onFormSubmit}>
         <button
           className="pop-up__close-button"
