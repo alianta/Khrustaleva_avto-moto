@@ -71,7 +71,10 @@ function AddReview({onPopUpClose}) {
         </div>
         <div className="review-form__field review-form__field--first">
           <span className="review-form__label">Оцените товар:</span>
-          <div className="rating">
+          <div
+            className="rating"
+            onMouseLeave={() =>rating === 0?setSelectingRatingValue(0):''}
+          >
             {
               Array.from({length: RATING_STAR_COUNT}).map((_, id) => {
                 const keyValue = `star-${id}`;
