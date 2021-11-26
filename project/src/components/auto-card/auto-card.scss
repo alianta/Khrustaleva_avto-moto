@@ -97,6 +97,7 @@
   font-size: 30px;
   line-height: 40px;
   color: $color-gray-2;
+  max-width: 500px;
 }
 
 .main-features-list {
@@ -203,6 +204,7 @@
   letter-spacing: 0.12em;
   width: fit-content;
   cursor: pointer;
+  max-width: 500px;
 
   &--first {
     margin-bottom: 17px;

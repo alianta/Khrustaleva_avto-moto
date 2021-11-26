@@ -1,4 +1,3 @@
-
 .specifications {
   display: flex;
   flex-direction: column;
@@ -14,7 +13,14 @@
   border-bottom: 1px solid $color-gray-3;
   color: $color-gray-2;
 }
+
+.specifications__title {
+  max-width: 380px;
+  display: inline-block;
+}
+
 .specifications__value {
   float: right;
   color: $color-black-1;
+  max-width: 160px;
 }

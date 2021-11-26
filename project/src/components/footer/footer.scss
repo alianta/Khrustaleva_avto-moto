@@ -15,7 +15,15 @@
 }
 
 .footer__item {
-  margin: 15px 0;
+  margin: 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer__link {
