@@ -12,7 +12,7 @@ function AddReview({onPopUpClose}) {
   const [isNameEmptyError, setIsNameEmptyError] = useState(false);
   const [isCommentEmptyError, setIsCommentEmptyError] = useState(false);
 
-  const onFormSubmit = (evt) => {
+  const handleFormSubmit = (evt) => {
     evt.preventDefault();
     if (name === '' && comment === '') {
       setIsNameEmptyError(true);
@@ -48,7 +48,7 @@ function AddReview({onPopUpClose}) {
 
   return (
     <div id="pop-up" className='pop-up' onMouseUp={(evt)=>evt.target.id === 'pop-up'?onPopUpClose():''} method="post" action="https://echo.htmlacademy.ru/" >
-      <form id="add-review-form" className="review-form" onSubmit={onFormSubmit}>
+      <form id="add-review-form" className="review-form" onSubmit={handleFormSubmit}>
         <button
           className="pop-up__close-button"
           type="button"

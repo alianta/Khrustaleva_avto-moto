@@ -8,7 +8,7 @@ import {POPUP_CLOSE_BUTTON_ID} from '../../const';
 
 function SitePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const onPopUpClose = () => setIsModalOpen(false);
+  const handlePopUpClose = () => setIsModalOpen(false);
   return (
     <div className="site-page"
       onClick={(evt)=>{
@@ -29,7 +29,7 @@ function SitePage() {
       <div className="wrapper">
         <Footer/>
       </div>
-      {isModalOpen?<AddReview onPopUpClose={()=>onPopUpClose()}/>:''}
+      {isModalOpen?<AddReview onPopUpClose={()=>handlePopUpClose()}/>:''}
     </div>
   );
 }
