@@ -10,7 +10,7 @@ function SitePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handlePopUpClose = () => setIsModalOpen(false);
   return (
-    <div className="site-page"
+    <div className={`site-page ${isModalOpen ? 'site-page--modal' : ''}`}
       onClick={(evt)=>{
         if(evt.target.id === POPUP_CLOSE_BUTTON_ID) {
           setIsModalOpen(true);
