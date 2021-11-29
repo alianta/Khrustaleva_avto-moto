@@ -208,6 +208,13 @@
       color: $color-red-1;
     }
   }
+
+  &:hover,
+  &:focus {
+    &::after {
+      color: $color-red-1;
+    }
+  }
 }
 
 .pop-up {

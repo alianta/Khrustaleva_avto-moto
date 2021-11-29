@@ -93,11 +93,17 @@ function AddReview({onPopUpClose}) {
                     />
                     <label
                       className={`rating__label ${rating>=id+1||selectingRatingValue>=id+1?'rating__label--active':''}`}
-                      onMouseEnter={({target}) => {
+                      onMouseEnter = {({target}) => {
                         setSelectingRatingValue(id+1);
+                      }}
+                      onKeyPress = {(evt) => {
+                        if (evt.key === 'Enter') {
+                          setSelectingRatingValue(id+1);
+                        }
                       }}
                       htmlFor={`star-${id}`}
                       aria-label={`Рейтинг ${id+1}`}
+                      tabIndex='0'
                     >
                     </label>
                   </React.Fragment>
