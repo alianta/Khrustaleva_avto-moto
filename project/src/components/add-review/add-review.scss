@@ -30,7 +30,8 @@
   background: none;
   cursor: pointer;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     content: ' ';
     top: 0;
@@ -45,6 +46,14 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $color-red-1;
+    }
   }
 }
 
