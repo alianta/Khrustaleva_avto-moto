@@ -24,16 +24,19 @@ function Tabs() {
         <li
           className={activeTab === TabNumbers.DEFAULT? 'information__item information__item--active' :'information__item'}
           onClick={() => {setActiveTab(TabNumbers.DEFAULT);}}
+          tabIndex='0'
         >Характеристики
         </li>
         <li
           className={activeTab === TabNumbers.REVIEWS? 'information__item information__item--active' :'information__item'}
           onClick={() => {setActiveTab(TabNumbers.REVIEWS);}}
+          tabIndex='0'
         >Отзывы
         </li>
         <li
           className={activeTab === TabNumbers.CONTACTS? 'information__item information__item--active' :'information__item'}
           onClick={() => {setActiveTab(TabNumbers.CONTACTS);}}
+          tabIndex='0'
         >Контакты
         </li>
       </ul>

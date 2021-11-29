@@ -22,7 +22,8 @@
   border: 1px solid $color-gray-3;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-white-1;
     background-color: $color-red-3;
   }
