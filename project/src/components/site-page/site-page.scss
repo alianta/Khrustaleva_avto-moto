@@ -1,14 +1,11 @@
 .header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 18px 5px 7px 5px;
   box-sizing: border-box;
   color: $color-gray-2;
   max-width: $desktop-width;
   margin: 0 auto;
-
-
 }
 .site-page {
   position: relative;
