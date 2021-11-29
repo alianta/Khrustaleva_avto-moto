@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   max-width: $desktop-width;
@@ -14,7 +14,9 @@
 }
 
 .footer__item {
-  margin: 15px;
+  margin-right: 5.7%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   &:first-child {
     margin-left: 0;
