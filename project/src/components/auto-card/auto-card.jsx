@@ -31,13 +31,13 @@ function AutoCard() {
         </a>
         <ul className="product-images__list">
           <li className="product-images__item product-images__item--current">
-            <img src="img/desktop-slide-1-prev.jpg" srcSet="img/desktop-slide-1-prev@2x.jpg 2x" width="128" height="80" alt="Фото снаружи"/>
+            <img className="product-images__picture" src="img/desktop-slide-1-prev.jpg" srcSet="img/desktop-slide-1-prev@2x.jpg 2x" width="128" height="80" alt="Фото снаружи"/>
           </li>
           <li className="product-images__item">
-            <img src="img/desktop-slide-2-prev.jpg" srcSet="img/desktop-slide-2-prev@2x.jpg 2x" width="128" height="80" alt="Фото салона"/>
+            <img className="product-images__picture" src="img/desktop-slide-2-prev.jpg" srcSet="img/desktop-slide-2-prev@2x.jpg 2x" width="128" height="80" alt="Фото салона"/>
           </li>
           <li className="product-images__item">
-            <img src="img/desktop-slide-3-prev.jpg" srcSet="img/desktop-slide-3-prev@2x.jpg 2x" width="128" height="80" alt="Фото приборной панели"/>
+            <img className="product-images__picture" src="img/desktop-slide-3-prev.jpg" srcSet="img/desktop-slide-3-prev@2x.jpg 2x" width="128" height="80" alt="Фото приборной панели"/>
           </li>
         </ul>
         <a
